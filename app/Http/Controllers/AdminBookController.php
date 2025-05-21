@@ -34,28 +34,28 @@ class AdminBookController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'author' => 'required',
-            'summary' => 'required',
-            'publication_date' => 'required|date',
-            'price' => 'required',
-            'image' => 'required',
-            'minimal_age' => 'required',
-            'category_id' => 'required'
+            'title'             => 'required',
+            'author'            => 'required',
+            'summary'           => 'required',
+            'publication_date'  => 'required',
+            'price'             => 'required',
+            'image'             => 'required',
+            'minimal_age'       => 'required',
+            'category_id'       => 'required'
         ]);
 
-        $book = Book::create([
-            'title' => $request->input('title'),
-            'author' => $request->input('author'),
-            'summary' => $request->input('summary'),
-            'publication_date' => $request->input('publication_date'),
-            'price' => $request->input('price'),
-            'image' => $request->input('image'),
-            'minimal_age' => $request->input('minimal_age'),
-            'category_id' => $request->input('category_id')
+        Book::create([
+            'title'             => $request->input('title'),
+            'author'            => $request->input('author'),
+            'summary'           => $request->input('summary'),
+            'publication_date'  => $request->input('publication_date'),
+            'price'             => $request->input('price'),
+            'image'             => $request->input('image'),
+            'minimal_age'       => $request->input('minimal_age'),
+            'category_id'       => $request->input('category_id')
         ]);
 
-        return redirect()->route('admin.books.index')->with('success', 'La categoria ha sido correctamente creada');
+        return redirect()->route('admin.books.index')->with('success', 'La libro ha sido correctamente creada');
     }
 
     /**

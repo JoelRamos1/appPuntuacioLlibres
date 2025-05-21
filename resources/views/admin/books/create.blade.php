@@ -60,7 +60,7 @@
             <label for="minimal_age" class="form-label">Edad minima recomendada:</label>
             <input type="number" name="minimal_age" class="form-control">
         </div>
-        <input type="submit" value="Editar libro" class="btn btn-primary">
+        <input type="submit" value="Crear libro" class="btn btn-primary">
     </form>
 </div>
 @endsection

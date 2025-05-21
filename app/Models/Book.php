@@ -13,10 +13,11 @@ class Book extends Model
         'title',
         'author',
         'summary',
-        'publishing_date',
+        'publication_date',
         'price',
         'image',
-        'minimum_age'
+        'minimal_age',
+        'category_id',
     ];
 
     public function valuation() {

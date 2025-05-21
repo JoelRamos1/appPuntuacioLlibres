@@ -29,10 +29,10 @@
                     @csrf
                     @method('DELETE')
                     <div class="btn-group">
-                        <a href="{{route('admin.users.show', $user->id)}}" class="btn btn-primary">Ver usuario</a>
-                        <a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-warning">Editar usuario</a>
+                        <a href="{{route('admin.users.show', $user->id)}}" class="btn btn-primary">Mostrar</a>
+                        <a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-warning">Editar</a>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">
-                            Eliminar usuario
+                            Eliminar
                         </button>
                     </div>
                 </form>

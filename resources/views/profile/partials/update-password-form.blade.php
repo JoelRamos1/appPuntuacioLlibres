@@ -1,9 +1,9 @@
 <div class="card">
-    <div class="card-header">{{ __('Update Password') }}</div>
+    <div class="card-header">{{ __('Actualizar contraseña') }}</div>
 
     <div class="card-body">
         <div class="mb-3">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            {{ __('Asegúrese de que su cuenta utilice una contraseña larga y aleatoria para mantener su seguridad.') }}
         </div>
         <form method="POST" action="{{ route('password.update') }}">
             @csrf
@@ -11,7 +11,7 @@
 
             <div class="row mb-3">
                 <label for="password" class="col-md-4 col-form-label text-md-end">
-                    {{ __('Current Password') }}
+                    {{ __('Contraseña actual') }}
                 </label>
 
                 <div class="col-md-6">
@@ -27,7 +27,7 @@
 
             <div class="row mb-3">
                 <label for="password" class="col-md-4 col-form-label text-md-end">
-                    {{ __('New Password') }}
+                    {{ __('Nueva contraseña') }}
                 </label>
 
                 <div class="col-md-6">
@@ -43,7 +43,7 @@
 
             <div class="row mb-3">
                 <label for="password_confirmation" class="col-md-4 col-form-label text-md-end">
-                    {{ __('Confirm Password') }}
+                    {{ __('Confirmar contraseña') }}
                 </label>
 
                 <div class="col-md-6">

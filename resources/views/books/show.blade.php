@@ -12,7 +12,7 @@
                 <span>{{$message}}</span>
             </div>
         @endif
-        <div class="row">
+        <div class="row row-cols-sm-1 row-cols-md-2 gy-3">
             <div class="col-5">
                 <img class="w-100" src="{{$book->image}}" alt="{{$book->title}}">
             </div>
@@ -77,7 +77,7 @@
                     </div>
                 @else
                     <div class="row">
-                        <div class="col w-100"><a href="{{url('/books/create/valuation/'.$id)}}" class="btn btn-primary">Evaluar libro</a></div>
+                        <div class="col w-100"><a href="{{url('/books/create/valuation/'.$id)}}" class="btn btn-primary">Evaluar</a></div>
                     </div>
                     
                 @endif

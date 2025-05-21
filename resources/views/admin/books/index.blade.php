@@ -24,14 +24,13 @@
                 <th>Edad minima</th>
                 <th>Acciones</th>
             </tr>
-        
     @foreach ($books as $book)
         <tr>
             <td>{{$book->id}}</td>
             <td>{{$book->title}}</td>
             <td>{{$book->author}}</td>
             <td>{{$book->category ? $book->category->name : "Sin categoria"}}</td>
-            <td>{{$book->summary}}</td>
+            <td class="text-truncate" style="max-width: 15rem">{{$book->summary}}</td>
             <td>{{$book->publication_date}}</td>
             <td>{{$book->price}}</td>
             <td>{{$book->image}}</td>
@@ -41,10 +40,10 @@
                     @csrf
                     @method('DELETE')
                     <div class="btn-group">
-                      <a href="{{route('admin.books.show', $book->id)}}" class="btn btn-primary">Mostrar en detalle</a>
-                      <a href="{{route('admin.books.edit', $book->id)}}" class="btn btn-warning">Editar libro</a>
+                      <a href="{{route('admin.books.show', $book->id)}}" class="btn btn-primary">Mostrar</a>
+                      <a href="{{route('admin.books.edit', $book->id)}}" class="btn btn-warning">Editar</a>
                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$book->id}}">
-                          Eliminar libro
+                          Eliminar
                       </button>
                     </div>
                 </form>

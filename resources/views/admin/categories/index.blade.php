@@ -34,11 +34,11 @@
                     @csrf
                     @method('DELETE')
                     <div class="btn-group">
-                        <a href="{{route('admin.categories.show', $category->id)}}" class="btn btn-primary">Mostrar en detalle</a>
-                        <a href="{{route('admin.categories.edit', $category->id)}}" class="btn btn-warning">Editar categoria</a>
+                        <a href="{{route('admin.categories.show', $category->id)}}" class="btn btn-primary">Mostrar</a>
+                        <a href="{{route('admin.categories.edit', $category->id)}}" class="btn btn-warning">Editar</a>
                         {{-- <button type="submit" class="btn btn-danger">Eliminar categoria</button> --}}
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$category->id}}">
-                            Eliminar categoria
+                            Eliminar
                         </button>
                     </div>
                 </form>

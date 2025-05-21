@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+@section('title', 'Ver información de libro')
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -25,11 +27,11 @@
                         </tr>
                         <tr>
                             <th>Categoria</th>
-                            <td>{{$book->category->name}}</td>
+                            <td>{{$book->category->name ?? "No tiene categoria"}}</td>
                         </tr>
                         <tr>
                             <th>Fecha de publicación</th>
-                            <td>{{ $book->publication_date }}</td>
+                            <td>{{ $book->publication_date ?? "No tiene fecha de publicación" }}</td>
                         </tr>
                         <tr>
                             <th>Precio</th>

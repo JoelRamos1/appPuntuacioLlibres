@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Ver categoria')
+@section('title', 'Ver información de categoria')
 
 @section('content')
 <div class="container">

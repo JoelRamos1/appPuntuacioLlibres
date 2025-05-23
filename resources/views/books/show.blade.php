@@ -12,7 +12,7 @@
                 <span>{{$message}}</span>
             </div>
         @endif
-        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gy-3">
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gx-5">
             <div class="col-5">
                 <img class="w-100" src="{{$book->image}}" alt="{{$book->title}}">
             </div>
@@ -57,27 +57,26 @@
             <div class="col-2">
                 @if($valuation)
                     <div class="row">
-                        <div class="col"><a href="{{url('/books/edit/valuation/'.$id)}}" class="btn btn-warning">Editar valoración</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="card">
-                            <div class="card-header">
-                                Valoracion hecha previamente
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="h5">Valoracion hecha previamente</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">"{{$valuation->pivot->valuation}}"</div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Puntuación: {{$valuation->pivot->score}}</li>
+                                </ul>
+                                <div class="card-footer">
+                                    <a href="{{url('/books/edit/valuation/'.$id)}}" class="btn btn-warning">Editar valoración</a>
+                                </div>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Puntuación: {{$valuation->pivot->score}}</li>
-                            </ul>
-                            <div class="card-body">
-                                {{$valuation->pivot->valuation}}
-                            </div>
-                            
                         </div>
-                        <p></p>
-                        <p></p>
                     </div>
                 @else
                     <div class="row">
-                        <div class="col w-100"><a href="{{url('/books/create/valuation/'.$id)}}" class="btn btn-primary">Evaluar</a></div>
+                        <div class="col"><a href="{{url('/books/create/valuation/'.$id)}}" class="btn btn-primary">Evaluar</a></div>
                     </div>
                     
                 @endif

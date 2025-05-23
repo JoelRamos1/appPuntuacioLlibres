@@ -17,13 +17,17 @@ class CategorySeeder extends Seeder
         $categories = [
             ['nom' => 'Realista'],
             ['nom' => 'Ciencia Ficción'],
-            ['nom' => 'Intriga'],
+            ['nom' => 'Suspense'],
             ['nom' => 'Fantasía'],
             ['nom' => 'Romance'],
             ['nom' => 'Ensayo'],
             ['nom' => 'Acción'],
             ['nom' => 'Poetica'],
-            ['nom' => 'Terror']
+            ['nom' => 'Terror'],
+            ['nom' => 'Distopía'],
+            ['nom' => 'Juvenil'],
+            ['nom' => 'Aventuras'],
+            ['nom' => 'Historica'],
         ];
 
         foreach ($categories as $category) {

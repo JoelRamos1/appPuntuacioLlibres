@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Ver información de usuario')
+@section('title', 'Ver información de usuario "'.$user->name.'"')
 
 @section('content')
 <div class="container">

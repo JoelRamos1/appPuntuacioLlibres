@@ -17,19 +17,19 @@
     <form action="{{route('admin.books.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="title" class="form-label">Titulo</label>
+            <label for="title" class="form-label"><sup>*</sup>Titulo:</label>
             <input type="text" name="title" class="form-control">
         </div>
         
         <div class="form-group">
-            <label for="author">Autor:</label>
+            <label for="author"><sup>*</sup>Autor:</label>
             <input type="text" name="author" class="form-control">
         </div>
         
         <div class="form-group">
-            <label for="category_id" class="form-label">Categoria</label>
+            <label for="category_id" class="form-label"><sup>*</sup>Categoria</label>
             <select name="category_id" class="form-control">
-                <option value="" selected></option>
+                <option value="" selected>Seleccione alguna categoria</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
@@ -37,7 +37,7 @@
         </div>
 
         <div class="form-group">
-            <label for="summary" class="form-label">Resumen:</label>
+            <label for="summary" class="form-label"><sup>*</sup>Resumen:</label>
             <textarea name="summary" cols="30" rows="10" class="form-control"></textarea>
         </div>
         
@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            <label for="price" class="form-label">Precio:</label>
+            <label for="price" class="form-label"><sup>*</sup>Precio:</label>
             <input type="number" name="price" min="0" max="9999" class="form-control">
         </div>
 
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group">
-            <label for="minimal_age" class="form-label">Edad minima recomendada:</label>
+            <label for="minimal_age" class="form-label"><sup>*</sup>Edad minima recomendada:</label>
             <input type="number" name="minimal_age" class="form-control">
         </div>
         <input type="submit" value="Crear libro" class="btn btn-primary">

@@ -23,6 +23,20 @@ class DatabaseSeeder extends Seeder
             'birthday_date' => '1980/01/01'
         ]);
 
+        User::factory()->create([
+            'name' => 'Joel',
+            'email' => 'joel@gmail.com',
+            'password' => Hash::make('Abcd@1235'),
+            'birthday_date' => '2006/04/14'
+        ]);
+
+        User::factory()->create([
+            'name' => 'Dani',
+            'email' => 'dani@gmail.com',
+            'password' => Hash::make('Abcd@1235'),
+            'birthday_date' => '2013/01/29'
+        ]);
+        
         $this->call([
             CategorySeeder::class,
             BookSeeder::class,

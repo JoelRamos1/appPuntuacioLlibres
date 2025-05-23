@@ -12,7 +12,7 @@
                 <span>{{$message}}</span>
             </div>
         @endif
-        <div class="row row-cols-sm-1 row-cols-md-2 gy-3">
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gy-3">
             <div class="col-5">
                 <img class="w-100" src="{{$book->image}}" alt="{{$book->title}}">
             </div>
@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="card">
                             <div class="card-header">
-                                Valoracion hecha
+                                Valoracion hecha previamente
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Puntuación: {{$valuation->pivot->score}}</li>

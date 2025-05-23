@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('summary');
             $table->date('publication_date')->nullable();
             $table->double('price');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->integer('minimal_age')->default(1);
             $table->timestamps();
         });

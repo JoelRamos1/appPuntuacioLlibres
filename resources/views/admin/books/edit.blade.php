@@ -19,26 +19,29 @@
         @method('PUT')
         <div class="form-group">
             <label for="title" class="form-label">Titulo</label>
-            <input type="text" name="title" value="{{$book->title}}" class="form-control">
+            <input type="text" name="title" value="{{$book->title}}" class="form-control" required>
         </div>
         
         <div class="form-group">
             <label for="author">Autor:</label>
-            <input type="text" name="author" value="{{$book->author}}" class="form-control">
+            <input type="text" name="author" value="{{$book->author}}" class="form-control" required>
         </div>
         
         <div class="form-group">
             <label for="category_id" class="form-label">Categoria</label>
-            <select name="category_id" class="form-control">
+            <select name="category_id" class="form-control" required>
+                <option value="" selected>Seleccione alguna categoria</option>
                 @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    <option value="{{$category->id}}" {{ $book->category_id == $category->id ? 'selected' : '' }}>
+                        {{$category->name}}
+                    </option>
                 @endforeach
             </select>
         </div>
 
         <div class="form-group">
             <label for="summary" class="form-label">Resumen:</label>
-            <textarea name="summary" cols="30" rows="10" class="form-control">{{$book->summary}}</textarea>
+            <textarea name="summary" cols="30" rows="10" class="form-control" required>{{$book->summary}}</textarea>
         </div>
         
         <div class="form-group">
@@ -58,7 +61,7 @@
 
         <div class="form-group">
             <label for="minimal_age" class="form-label">Edad minima recomendada:</label>
-            <input type="number" name="minimal_age" value="{{$book->minimal_age}}" class="form-control">
+            <input type="number" name="minimal_age" value="{{$book->minimal_age}}" class="form-control" required>
         </div>
 
         <input type="submit" value="Editar libro" class="btn btn-primary">

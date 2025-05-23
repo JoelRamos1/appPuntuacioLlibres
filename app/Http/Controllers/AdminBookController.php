@@ -34,14 +34,14 @@ class AdminBookController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'             => 'required',
-            'author'            => 'required',
-            'summary'           => 'required',
-            'publication_date'  => 'required',
-            'price'             => 'required',
-            'image'             => 'required',
-            'minimal_age'       => 'required',
-            'category_id'       => 'required'
+            'title'             => 'required|string|max:255',
+            'author'            => 'required|string',
+            'summary'           => 'required|string',
+            'publication_date'  => 'required|date',
+            'price'             => 'required|integer',
+            'image'             => 'required|string',
+            'minimal_age'       => 'required|integer|min:1|max:150',
+            'category_id'       => 'required|integer'
         ]);
 
         Book::create([
@@ -84,14 +84,14 @@ class AdminBookController extends Controller
     public function update(Request $request, string $id)
     {
         $datosValidados = $request->validate([
-            'title' => 'required',
-            'author' => 'required',
-            'summary' => 'required',
-            'publication_date' => 'required',
-            'price' => 'required',
-            'image' => 'required',
-            'minimal_age' => 'required',
-            'category_id' => 'required'
+            'title'             => 'required|string|max:255',
+            'author'            => 'required|string',
+            'summary'           => 'required|string',
+            'publication_date'  => 'required|date',
+            'price'             => 'required|integer',
+            'image'             => 'required|string',
+            'minimal_age'       => 'required|integer|min:1|max:150',
+            'category_id'       => 'required|integer'
         ]);
 
         $book = Book::findOrFail($id);

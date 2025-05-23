@@ -18,7 +18,7 @@
             @method('PUT')
             <div class="form-group">
                 <label for="name" class="form-label">Nombre:</label>
-                <input type="text" name="name" value="{{old('name', $category->name)}}" class="form-control">
+                <input type="text" name="name" value="{{old('name', $category->name)}}" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Editar categoria</button>
         </form>
